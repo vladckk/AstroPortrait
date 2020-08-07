@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Астропортрер"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/astro"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дата Рождения: "
+        android:textSize="25dp"
+        android:id="@+id/textView1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_below="@id/astro"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/astro"
+        android:layout_toRightOf="@id/textView1"
+        android:textSize="25dp"
+        android:text="sd"
+        android:id="@+id/birthDateText"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateButton"
+        android:text="Выбрать дату"
+        android:layout_below="@id/textView1"
+        android:layout_marginTop="20dp"
+        android:onClick="setDate"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showButton"
+        android:layout_below="@id/textView1"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:text="Показать"
+        android:onClick="loadAstro"
+        />
+
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateButton"
+        android:id="@+id/web"
+        />
+
+</RelativeLayout>
